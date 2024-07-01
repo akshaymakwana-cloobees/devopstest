@@ -21,7 +21,7 @@ jobs:
         - name: Retrieve Account Record
           run: |
             echo "Retrieving Account record"
-            sfdx force:data:record:get -s Account -i '001XXXXXXXXXXXX' -u MySandboxOrg --json
+            sfdx force:data:record:get -s Account -i '0015i00000fQe8pAAC' -u creative-impala --json
         - name: Print Account Record
           run: |
             echo "Printing Account record"
