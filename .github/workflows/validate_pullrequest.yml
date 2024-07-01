@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'force-app/**'
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -22,6 +20,11 @@ jobs:
           run: |
             echo "running sfdx login using sfdx-url"
             sf org login sfdx-url --sfdx-url-file  ${{ secrets.SFDX_AUTH_URL }}
+        - name: Retrive Account records via soql
+          run: |
+            echo "running Retrive Account records via soql start"
+            sf data export beta tree --query "SELECT Id, Name FROM Account"
+            echo "running Retrive Account records via soql end"
         - name: Retrieve Account Record
           run: |
             echo "Retrieving Account record"
