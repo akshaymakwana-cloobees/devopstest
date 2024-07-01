@@ -19,7 +19,7 @@ jobs:
         - name: Login To Org
           run: |
             echo "running sfdx login using sfdx-url"
-            sf org login sfdx-url --sfdx-url-file  ${{ secrets.SFDX_AUTH_URL }}
+            sf org login sfdx-url --sfdx-url-file  "${{ secrets.SFDX_AUTH_URL }}"
         - name: Retrive Account records via soql
           run: |
             echo "running Retrive Account records via soql start"
