@@ -29,7 +29,7 @@ jobs:
         - name: Retrieve Account Record
           run: |
             echo "Retrieving Account record"
-            sfdx force:data:record:get -s Account -i '0015i00000fQe8pAAC' -u creative-impala --json
+            sfdx force:data:record:get -s Account -i 0015i00000fQe8pAAC --json
         - name: Print Account Record
           run: |
             echo "Printing Account record"
