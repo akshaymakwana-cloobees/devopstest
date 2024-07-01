@@ -17,7 +17,7 @@ jobs:
         - name: Login To Org
           run: |
             echo "running sfdx login using sfdx-url"
-            sfdx org login sfdx-url --set-default --sfdx-url-file <(echo "${{ secrets.SFDX_AUTH_URL }}")
+            sf org login web --instance-url https://creative-impala-3wf91c-dev-ed.trailblaze.lightning.force.com/ --set-default --browser chrome --client-id 3MVG9wt4IL4O5wvKdLFBIlo07OoVWmvx2r8ZAwNFtJU6Z6RJfQwGI.e_Gj8L7PFPzzKfgoca2kRppmkYHpfeC
         - name: Retrieve Account Record
           run: |
             echo "Retrieving Account record"
