@@ -24,7 +24,7 @@ jobs:
         - name: Retrive Account records via soql
           run: |
             echo "running Retrive Account records via soql start"
-            sfdx force:data:soql:query -q "SELECT Id, Name FROM Account"
+            sfdx force:data:soql:query -q "SELECT Id, Name FROM Account LIMIT 1"
             echo "running Retrive Account records via soql end"
         - name: Retrieve Account Record
           run: |
