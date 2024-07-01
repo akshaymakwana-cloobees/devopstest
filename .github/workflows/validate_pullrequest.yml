@@ -24,7 +24,7 @@ jobs:
         - name: Retrive Account records via soql
           run: |
             echo "running Retrive Account records via soql start"
-            sf data export beta tree --query "SELECT Id, Name FROM Account"
+            sfdx force:data:soql:query -q "SELECT Id, Name FROM Account"
             echo "running Retrive Account records via soql end"
         - name: Retrieve Account Record
           run: |
