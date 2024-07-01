@@ -27,4 +27,3 @@ jobs:
             echo "Printing Account record"
             echo ${{ steps.retrieve-account.outputs.result }}
 
-    
